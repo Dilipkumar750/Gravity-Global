@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Hero from './Hero';
+import Innovation from './Innovation';
+import MainProducts from './MainProducts';
+
 
 const Home = () => {
     const navigate = useNavigate();
@@ -11,6 +14,8 @@ const Home = () => {
     return (
         <>
             <Hero />
+            <Innovation />
+            <MainProducts />
         </>
     )
 }

@@ -1,66 +1,70 @@
-import React from 'react'
+import React from 'react';
+import { SiFacebook } from "react-icons/si";
+import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import logo from '../../assets/logo.png';
 
-const Footer = () => {
+const ColorFoot = () => {
+  const footerLinks = [
+    {
+      title: "Product List",
+      links: ["Forklift", "Medical Apparatus", "Engineering Machinery", "Food Machinery", "Electric Motorcycle"],
+    },
+    {
+      title: "Product List",
+      links: ["Farm Machinery", "Packing Machine", "Other Machinery", "Grain Processing", "Animal Husbandry"],
+    },
+    {
+      title: "Contact Us",
+      links: ["Email", "Phone",],
+    },
+    {
+      title: "Information",
+      links: ["Home", " Product List","About Us", "Terms & Conditions", "Privacy Policy"],
+    },
+  ];
+
+  const socialIcons = [
+    { icon: <SiFacebook />, link: "#", label: "Facebook" },
+    { icon: <FaInstagram />, link: "#", label: "Instagram" },
+    { icon: <FaYoutube />, link: "#", label: "YouTube" },
+    { icon: <FaWhatsapp />, link: "#", label: "WhatsApp" },
+  ];
+
   return (
-    <footer>
-      
+    <footer className="bg-orange-500 p-10 font-[sans-serif] tracking-wide">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-1">
+        <div className="mt-5">
+          <a href="#">
+            <img src={logo} alt="Ultrafly Solutions Logo" className="w-52" />
+          </a>
+          <ul className="flex space-x-6 mt-4 items-center">
+            {socialIcons.map((social, index) => (
+              <li key={index}>
+                <a href={social.link} aria-label={social.label} className="text-gray-300 hover:text-white">
+                  {social.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      
-<footer className="bg-orange-500">
-  <div className="h-[50%]  mx-auto grid text-gray-50 lg:grid-cols-12">
-    <div className="flex flex-col items-start border-r border-b border-slate-500 py-8 px-5 sm:flex-row sm:px-8 md:pt-14 lg:col-span-7 xl:pl-32 2xl:pl-40">
-      <img className="w-40" src="/images/VlG3Gf3I1xy18sBfhC_5I.png" alt="" />
-      <p className="pt-4 text-sm leading-6 tracking-wide sm:pl-10 sm:pt-0">Why Choose Us
-HENAN SINCERELY INDUSTRY CO.,LTD is the professional supplier and exporter for Various agricultural production machinery and related gear rubber conveyor belt.Founded in 1990, SINCERELY is a national high-tech enterprise </p>
-    </div>
-    <div className="px-5 py-8 sm:px-8 md:pt-14 lg:col-span-5 xl:pr-32 2xl:pr-40">
-      <p className="font-medium text-orange-500">Demo</p>
-      <p className="mb-4 mt-4 text-2xl sm:mb-8 sm:text-5xl">Request a Contact</p>
-      <div className="flex max-w-lg rounded-full bg-white ring-orange-300 focus-within:ring">
-        <input className="w-full rounded-full px-6 text-gray-600 outline-none md:px-10" type="email" placeholder="Enter your email" />
-        <button className="rounded-full bg-orange-600 p-2 ring-orange-300 focus:ring active:scale-105 md:p-5">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </button>
+        {footerLinks.map((section, index) => (
+          <div key={index}>
+            <h4 className="text-lg font-semibold mb-6 text-black">{section.title}</h4>
+            <ul className="space-y-4">
+              {section.links.map((link, i) => (
+                <li key={i}>
+                  <a href="#" className="text-gray-300 hover:text-white text-sm">{link}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </div>
-    <nav aria-label="Footer Navigation" className="flex flex-wrap border-t border-r border-slate-500 px-5 pb-10 sm:py-8 sm:px-8 lg:col-span-7 lg:border-t-0 xl:flex-nowrap xl:space-x-16 xl:pl-32 2xl:pl-40">
-      <ul className="mt-8 mr-4 flex-grow space-y-3 whitespace-nowrap md:mt-0">
-        <li><strong>Resources</strong></li>
-        <li><a href="#"> Products</a></li>
-        <li><a href="#"> Profile</a></li>
-        <li><a href="#"> Contact</a></li>
-        <li><a href="#"> Guides </a></li>
-        <li><a href="#"> Webinars </a></li>
-        <li><a href="#"> Marketing </a></li>
-        <li><a href="#"> View More</a></li>
-      </ul>
-      <ul className="mt-8 mr-4 flex-grow space-y-3 whitespace-nowrap md:mt-0">
-        <li><strong>Comparisons</strong></li>
-        <li><a href=""> Customer Service </a></li>
-        <li><a href=""> Guides </a></li>
-        <li><a href=""> Webinars </a></li>
-        <li><a href=""> Media </a></li>
-      </ul>
-      <ul className="mt-8 mr-4 flex-grow space-y-3 whitespace-nowrap md:mt-0">
-        <li><strong>Guides</strong></li>
-        <li><a href=""> Why Us? </a></li>
-        <li><a href=""> Blog </a></li>
-        <li><a href=""> Webinars </a></li>
-        <li><a href=""> Marketing </a></li>
-        <li><a href=""> Media </a></li>
-      </ul>
-    </nav>
-    <div className="border-t border-slate-500 py-4 lg:col-span-12">
-      <p className="text-center text-sm text-gray-400">(2024) Manufacturer, Trading Company
-Country / Region Henan, China Main Products farm machinery, Industrial conveyor belts, rubber conveyer belt, Agricultural machinery</p>
-    </div>
-  </div>
-</footer>
 
+      <p className="text-black text-sm mt-10 text-center">© Ultrafly Solutions. All rights reserved.</p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default ColorFoot;
