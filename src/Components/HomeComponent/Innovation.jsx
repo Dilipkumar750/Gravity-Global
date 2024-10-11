@@ -12,7 +12,7 @@ const Innovation = () => {
                 className='w-screen h-[70vh]'
             />
             <div className='absolute top-20 left-8 right-4 text-black mt-20 w-1/3 font-medium'>
-                <h1 className='text-3xl font-bold mb-4 text-center'>Innovation</h1>
+                <h1 className='text-3xl font-bold mb-4 text-center text-orange-500'>Innovation</h1>
                 <p>
                     India's machinery exports are growing quickly, especially in areas like agricultural equipment, construction tools, and automotive parts. Indian companies are adding modern technology like automation and IoT to their machines, making them more competitive globally.
                 </p>
