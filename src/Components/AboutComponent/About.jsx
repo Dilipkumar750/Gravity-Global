@@ -2,7 +2,7 @@ import React from 'react';
 import about from '../../assets/about.png';
 import imageOne from '../../assets/medicalAbout.jpg';
 import imageTwo from '../../assets/agriAbout.jpeg';
-import imageThree from '../../assets/engineering.jpg';
+import imageThree from '../../assets/packing.jpg';
 import imageFour from '../../assets/packingAbout.jpeg';
 import vision from '../../assets/vision.jpg'
 import mission from '../../assets/mission.jpg'
