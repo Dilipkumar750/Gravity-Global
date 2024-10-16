@@ -19,18 +19,18 @@ const About = () => {
   return (
     <div className="font-sans">
       <div className="grid lg:grid-cols-2 items-center lg:gap-y-6 bg-orange-500">
-        <div className="max-lg:order-1 max-lg:text-center sm:p-12 p-4">
-          <h2 className="text-gray-800 lg:text-5xl text-3xl font-bold lg:!leading-[56px] items-center">Our Company</h2>
-          <p className="text-gray-800 mt-6 text-base leading-relaxed">
+        <div className="max-lg:order-1 max-lg:text-center sm:p-12 p-4" data-aos="fade-right">
+          <h2 className="text-white lg:text-5xl text-4xl font-bold lg:!leading-[56px] items-center text-center">Our Company</h2>
+          <p className="text-white mt-6 text-base leading-relaxed justify-center text-justify">
             Gravity Global Export Sdn. Bhd. was incorporated on 11 November 2021 in Malaysia under the name Gravity Global Export Sdn. Bhd. with the registration number 202101037574 (1437874-D). The company engages in the retail sale of various products over the internet, the wholesale of a variety of goods without any particular specialization, and other retail sales in non-specialized stores.
             <br /><br />
             Gravity Global Export Sdn. Bhd. is a private limited company and has been operating for 3 years.
           </p>
           <button type="button"
-            className="bg-transparent border-2 border-gray-800 mt-12 transition-all text-gray-800 font-bold text-sm rounded-md px-6 py-2.5">Get Started</button>
+            className="bg-black border-2 mt-12 text-white font-bold text-sm rounded-xl px-6 py-2.5 item-center">Get Started</button>
         </div>
 
-        <div className="lg:h-[480px] flex items-center">
+        <div className="lg:h-[480px] flex items-center" data-aos="fade-left">
           <img src={about} className="w-full h-full object-cover" alt="About Our Company" />
         </div>
       </div>
@@ -39,7 +39,7 @@ const About = () => {
         {/* Major Products Header */}
         <h1 className='text-3xl font-bold mb-4 text-center text-orange-500'>Our Famous Products</h1>
         {/* Product Grid */}
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6" data-aos="fade-up">
           {products.map((product, index) => (
             <div
               key={index}
@@ -69,51 +69,49 @@ const About = () => {
           with clients to achieve their goals on time and within budget.
         </p>
       </div>
-      <div className="mt-8 w-[920px] mx-auto">
+      <div className="mt-8 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
         {/* Vision Section */}
         <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
           {/* Vision Text */}
-          <div className="lg:w-1/2 p-4 lg:text-left text-center">
+          <div className="lg:w-3/4 p-4 lg:text-left text-center" data-aos="fade-right">
             <h1 className="text-3xl font-bold mb-4 text-orange-500">Vision</h1>
-            <p>
-              To be a global leader in delivering innovative and sustainable solutions, empowering
-              businesses to achieve excellence and drive positive change worldwide.
+            <p className='text-xl text-justify'>
+              Our vision is to be a global leader in delivering innovative and sustainable solutions. We aim to empower businesses to achieve excellence while driving positive change worldwide, creating a lasting impact for future generations.
             </p>
           </div>
           {/* Vision Image */}
           <div className="lg:w-1/2 p-4 flex justify-center">
-            <img src={vision} alt="Vision Image" className="w-52 h-52 object-cover rounded-full" />
+            <img src={vision} alt="Vision Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-left"/>
           </div>
         </div>
 
         {/* Mission Section */}
         <div className="flex flex-col lg:flex-row-reverse items-center lg:justify-between mb-8">
           {/* Mission Text */}
-          <div className="lg:w-1/2 p-4 lg:text-right text-center">
+          <div className="lg:w-3/4 p-4 lg:text-right text-center" data-aos="fade-left">
             <h1 className="text-3xl font-bold mb-4 text-orange-500">Mission</h1>
-            <p>
-              Our mission is to provide top-quality services and products through cutting-edge
-              technology, expert collaboration, and customer-centric approaches. We aim to build
-              lasting partnerships, enhance global connectivity, and contribute to sustainable growth
-              for our clients and communities.
+            <p className='text-xl text-justify'>
+              Our mission is to provide top-quality services and products through cutting-edge technology, expert collaboration, and customer-centric approaches. We aim to build lasting partnerships, enhance global connectivity, and contribute to sustainable growth for our clients and communities.
             </p>
           </div>
           {/* Mission Image */}
-          <div className="lg:w-1/2 p-4 flex justify-center">
-            <img src={mission} alt="Mission Image" className="w-52 h-52 object-cover rounded-full " />
+          <div className="lg:w-1/2 p-4 flex justify-center" data-aos="fade-right">
+            <img src={mission} alt="Mission Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-right"/>
           </div>
         </div>
+
+        {/* Selling Section */}
         <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-8">
-          {/* Vision Text */}
-          <div className="lg:w-1/2 p-4 lg:text-left text-center">
+          {/* Selling Text */}
+          <div className="lg:w-3/4 p-4 lg:text-left text-center" data-aos="fade-right">
             <h1 className="text-3xl font-bold mb-4 text-orange-500">Selling</h1>
-            <p>
-            We specialize in sourcing and customizing a wide range of products, including machinery, spare parts, and various online categories, tailored to meet customer requirements. Our expertise spans imports from China, India, Taiwan, and Thailand. We ensure high-quality products that align with your specifications. Let us handle your sourcing needs with precision and reliability.
+            <p className='text-xl text-justify'>
+              We specialize in sourcing and customizing a wide range of products, including machinery, spare parts, and various online categories, tailored to meet customer requirements. Our expertise spans imports from China, India, Taiwan, and Thailand. We ensure high-quality products that align with your specifications. Let us handle your sourcing needs with precision and reliability.
             </p>
           </div>
-          {/* Vision Image */}
+          {/* Selling Image */}
           <div className="lg:w-1/2 p-4 flex justify-center">
-            <img src={selling} alt="Vision Image" className="w-52 h-52 object-cover rounded-full" />
+            <img src={selling} alt="Selling Image" className="w-52 h-52 object-cover rounded-full" data-aos="fade-left"/>
           </div>
         </div>
       </div>

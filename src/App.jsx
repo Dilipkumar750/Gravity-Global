@@ -11,10 +11,18 @@ import MainProducts from './Components/HomeComponent/MainProducts';
 import Footer from './Pages/Footer/Footer';
 import About from './Components/AboutComponent/About';
 import OurProducts from './Components/ProductComponent/OurProducts';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function App() {
-  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: 'ease-in-out', // Animation easing
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   return (
     <>

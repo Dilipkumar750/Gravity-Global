@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +13,9 @@ const Navbar = () => {
         <nav className="bg-white dark:bg-gray-900 mt-0 ml-10"> {/* Set margin-top to 0 */}
             <div className="max-w-full flex flex-wrap items-center justify-between mx-auto">
                 {/* Logo Section */}
-                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src={logo} className="h-8" alt="Logo" />
-                </a>
+                </Link>
 
                 {/* Hamburger Menu Button for Mobile */}
                 <button
@@ -33,24 +34,24 @@ const Navbar = () => {
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-0 border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-orange-700">
                         <li>
-                            <a href="/" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            <Link to="/" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/About" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            <Link to="/About" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
                                 About us
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="OurProducts" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            <Link to="OurProducts" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
                                 Our Products
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/Contact" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            <Link to="/Contact" className="block py-2 px-3 text-black-900 rounded hover:bg-orange-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-orange-700 dark:hover:text-white md:dark:hover:bg-transparent">
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

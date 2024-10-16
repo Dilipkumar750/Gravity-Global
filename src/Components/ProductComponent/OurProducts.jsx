@@ -138,10 +138,10 @@ const CategorySection = () => {
     };
 
     return (
-        <div className=" h-full">
+        <div className=" h-full mb-10">
             <div
-                className="text-white py-16 px-8 font-sans"
-                style={{ backgroundImage: `url(${product})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                className="relative text-white py-16 px-8 font-sans bg-black sm:bg-cover sm:bg-center"
+                style={{ backgroundImage: `url(${product})` }}
             >
                 <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-x-6 gap-y-8">
                     <div className="md:w-2/5 md:text-left">
@@ -164,7 +164,7 @@ const CategorySection = () => {
             <h2 className="text-3xl text-orange-500 font-bold text-center mt-10">Product Categories</h2>
             <div className="mt-6 flex flex-col md:flex-row">
                 {/* Sticky Category Sidebar */}
-                <div className="sticky top-2 h-full w-full md:w-1/4 md:mr-10 bg-white shadow-md">
+                <div className="sm:sticky  top-2 h-full w-full md:w-1/4 md:mr-10 bg-white shadow-md">
                     {Object.keys(categories).map((category, index) => (
                         <div className="border-b border-gray-200" key={index}>
                             <h2 className="bg-gray-100 px-4 py-2">
@@ -207,7 +207,7 @@ const CategorySection = () => {
                                     className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                                 />
                             </div>
-                            <div className="flex flex-col justify-between h-64 p-4 bg-gray-100">
+                            <div className="flex flex-col justify-between h-60 p-4 bg-gray-100">
                                 <div className="text-center flex-grow">
                                     <h3 className="text-lg font-semibold text-gray-800">{product.title}</h3>
                                     <p className="text-sm text-gray-600 mt-2">{product.description}</p>
