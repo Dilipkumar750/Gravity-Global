@@ -26,14 +26,14 @@ const Contact = () => {
           <h2 className="text-4xl text-orange-500 font-bold text-center">Product Inquiry</h2>
           
           {/* Contact Details Section */}
-          <div className="mt-6 text-gray-800 flex flex-col md:flex-row">
-            <div className="md:flex-1">
+          <div className="mt-6 text-gray-800 flex flex-col md:flex-row" >
+            <div className="md:flex-1" data-aos="fade-right">
               <p>
                 At Global Exports, we're always here to help you connect, grow, and explore new opportunities.
                 Whether you have a question, need more information about our services, or want to discuss a potential partnership, 
                 we would love to hear from you. Feel free to reach out to us through any of the following ways:
               </p>
-              <p className="mt-4 font-semibold text-orange-500">Address:</p>
+              <p className="mt-4 font-semibold text-orange-500" >Address:</p>
               <p>123 Business Avenue, Tech Park,</p>
               <p>Chennai - 600042, Tamil Nadu, India</p>
               <p className="mt-4 font-semibold text-orange-500">Phone:</p>
@@ -45,7 +45,7 @@ const Contact = () => {
               <p>Saturday: 10:00 AM – 2:00 PM</p>
             </div>
             <div className="md:flex-1 flex justify-center">
-              <img src={medical} alt="Medical Services" className="w-3/4 h-auto" />
+              <img src={medical} alt="Medical Services" className="w-3/4 h-auto" data-aos="fade-left"/>
             </div>
           </div>
 
